@@ -2,12 +2,25 @@
   "name": "roulade",
   "version": "0.0.3",
   "description": "React & Redux bindings for GraphQL",
+  "keywords": ["react","redux","graphQL"],
+  "license": "MIT",
+  "author": "Alex Boerstler <aboerstler@paintnite.com>",
+  "contributors": [
+    {
+      "name": "Chris Chambers",
+      "email": "cchambers@paintnite.com"
+    },{
+      "name": "Jordan Vishniak",
+      "email": "jvishniac@paintnite.com"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/nerdgrass/roulade/issues"
+  },
   "main": "index.js",
   "scripts": {
     "test": "mocha --compilers js:babel-register"
   },
-  "author": "Alex Boerstler",
-  "license": "MIT",
   "devDependencies": {
     "babel-preset-es2015": "^6.5.0",
     "babel-register": "^6.5.2",
