@@ -1,6 +1,10 @@
 # Roulade v0.0.3
-Roulade is a library to enable React & Redux applications to easily work with GraphQL
-servers.
+Roulade is a library to enable React & Redux applications to easily work with
+GraphQL servers. Please note that this library is under heavy development -
+please pardon the rough edges.
+
+## Installation
+* `npm install roulade`
 
 ## API
 ### Wrapper
