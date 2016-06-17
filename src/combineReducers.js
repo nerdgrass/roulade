@@ -33,7 +33,7 @@
 
 // Dependencies
 import { combineReducers as reduxCombineReducers } from 'redux'
-import { rouladeReducer } from '../roulade/reducer'
+import { rouladeReducer } from './reducer'
 
 // If user wants to replace redux's combineReducers fn
 const combineReducers = (reducers) => {

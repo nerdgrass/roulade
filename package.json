@@ -34,7 +34,9 @@
     "react": "^0.14.7"
   },
   "dependencies": {
+    "lodash": "^4.13.1",
     "lokka": "^1.7.0",
-    "lokka-transport-http": "^1.4.0"
+    "lokka-transport-http": "^1.4.0",
+    "redux": "^3.5.2"
   }
 }
