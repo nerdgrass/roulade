@@ -3,11 +3,11 @@
   Just import/export & renaming to present a pretty API
 */
 
-import * as actions from './actions'
-import { rouladeReducer as reducer } from './reducer'
-import combineReducers from './combineReducers'
-import { wrapper } from './wrapper'
-import { BODY, QL } from './dsl'
+import * as actions from './src/actions'
+import { rouladeReducer as reducer } from './src/reducer'
+import combineReducers from './src/combineReducers'
+import { wrapper } from './src/wrapper'
+import { BODY, QL } from './src/dsl'
 
 export {
   actions,
