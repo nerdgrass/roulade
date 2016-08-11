@@ -34,7 +34,7 @@
     "es2015",
     "redux",
     "graphQL",
-    "relay",
+    "relay"
   ],
   "author": "Alex Boerstler <aboerstler@paintnite.com>",
   "contributors": [
