@@ -1,13 +1,14 @@
 {
   "name": "roulade",
-  "version": "0.1.0",
+  "version": "0.0.5",
   "description": "React and Redux bindings for GraphQL",
   "bin": {
-    "app": "dist/app.js"
+    "roulade": "dist/roulade.js"
   },
   "files": [
     "dist"
   ],
+  "main": "dist/roulade.js",
   "scripts": {
     "build": "mkdir -p dist && rollup -c",
     "prepublish": "npm run build",
