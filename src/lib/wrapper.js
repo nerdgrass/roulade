@@ -4,7 +4,7 @@
 */
 
 // Dependencies
-import * as _ from 'lodash'
+import { merge } from 'lodash'
 
 // Exports
 export function wrapper(component, data) {
@@ -16,7 +16,7 @@ export function wrapper(component, data) {
     return data.cursor
   }
   component.merge = function(obj1, obj2) {
-    return _.merge(obj1, obj2)
+    return merge(obj1, obj2)
   }
   // used when calling actions
   component.exposeData = function() {

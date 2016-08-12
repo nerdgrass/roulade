@@ -1,7 +1,6 @@
 import chai, { expect } from 'chai'
 
-
-import { actions, reducer } from '../index.js'
+import { actions } from './index.js';
 
 // Mocks
 const mockState = {
