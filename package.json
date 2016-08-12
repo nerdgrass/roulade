@@ -3,15 +3,11 @@
   "version": "0.0.4",
   "description": "React and Redux bindings for GraphQL",
   "bin": {
-    "babel-webpack-package-boilerplate": "./bin/main.js"
+    "app": "dist/app.js"
   },
-  "main": "dist/index.js",
   "files": [
     "dist"
   ],
-  "directories": {
-    "lib": "src/lib"
-  },
   "scripts": {
     "build": "mkdir -p dist && rollup -c",
     "prepublish": "npm run build",
