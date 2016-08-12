@@ -1,6 +1,6 @@
 {
   "name": "roulade",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "React and Redux bindings for GraphQL",
   "bin": {
     "app": "dist/app.js"
@@ -53,5 +53,4 @@
     "chai": "^3.5.0",
     "mocha": "^2.4.5"
   }
-
 }
