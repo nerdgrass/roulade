@@ -1,6 +1,6 @@
 {
   "name": "roulade",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "React and Redux bindings for GraphQL",
   "bin": {
     "roulade": "dist/roulade.js"
