@@ -41,15 +41,18 @@ module.exports =
 /******/ 	return __webpack_require__(0);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
+/******/ ({
+
+/***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _chai = __webpack_require__(1);
+	var _chai = __webpack_require__(179);
 	
 	var _chai2 = _interopRequireDefault(_chai);
+	
+	var _index = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./index.js\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -78,35 +81,35 @@ module.exports =
 	  });
 	  context('Query Request', function () {
 	    it('returns an object', function () {
-	      (0, _chai.expect)(actions.queryRequest('foo', {}, mockSchema)).to.be.an('object');
+	      (0, _chai.expect)(_index.actions.queryRequest('foo', {}, mockSchema)).to.be.an('object');
 	    });
 	    it('has type: ROULADE_QUERY_REQUEST', function () {
-	      (0, _chai.expect)(actions.queryRequest('foo', {}, mockSchema)).to.have.property('type', 'ROULADE_QUERY_REQUEST');
+	      (0, _chai.expect)(_index.actions.queryRequest('foo', {}, mockSchema)).to.have.property('type', 'ROULADE_QUERY_REQUEST');
 	    });
 	    it('has schema argument in return object', function () {
-	      (0, _chai.expect)(actions.queryRequest('foo', {}, mockSchema)).to.have.property('fragment', mockSchema);
+	      (0, _chai.expect)(_index.actions.queryRequest('foo', {}, mockSchema)).to.have.property('fragment', mockSchema);
 	    });
 	  });
 	  context('Query Success', function () {
 	    it('returns an object', function () {
-	      (0, _chai.expect)(actions.querySuccess(mockResponse, 'foo', {}, mockSchema)).to.be.an('object');
+	      (0, _chai.expect)(_index.actions.querySuccess(mockResponse, 'foo', {}, mockSchema)).to.be.an('object');
 	    });
 	    it('has type: ROULADE_QUERY_SUCESS', function () {
-	      (0, _chai.expect)(actions.querySuccess(mockResponse, 'foo', {}, mockSchema)).to.have.property('type', 'ROULADE_QUERY_SUCCESS');
+	      (0, _chai.expect)(_index.actions.querySuccess(mockResponse, 'foo', {}, mockSchema)).to.have.property('type', 'ROULADE_QUERY_SUCCESS');
 	    });
 	    it('has response argument in return object', function () {
-	      (0, _chai.expect)(actions.querySuccess(mockResponse, 'foo', {}, mockSchema)).to.have.property('response', mockResponse);
+	      (0, _chai.expect)(_index.actions.querySuccess(mockResponse, 'foo', {}, mockSchema)).to.have.property('response', mockResponse);
 	    });
 	    it('has schema argument in return object', function () {
-	      (0, _chai.expect)(actions.querySuccess(mockResponse, 'foo', {}, mockSchema)).to.have.property('fragment', mockSchema);
+	      (0, _chai.expect)(_index.actions.querySuccess(mockResponse, 'foo', {}, mockSchema)).to.have.property('fragment', mockSchema);
 	    });
 	  });
 	  context('Query Error', function () {
 	    it('returns an object', function () {
-	      (0, _chai.expect)(actions.queryError('ERROR', 'foo', {}, mockSchema)).to.be.an('object');
+	      (0, _chai.expect)(_index.actions.queryError('ERROR', 'foo', {}, mockSchema)).to.be.an('object');
 	    });
 	    it('has type: ROULADE_QUERY_ERROR', function () {
-	      (0, _chai.expect)(actions.queryError('ERROR', 'foo', {}, mockSchema)).to.have.property('type', 'ROULADE_QUERY_ERROR');
+	      (0, _chai.expect)(_index.actions.queryError('ERROR', 'foo', {}, mockSchema)).to.have.property('type', 'ROULADE_QUERY_ERROR');
 	    });
 	  });
 	
@@ -116,97 +119,97 @@ module.exports =
 	  context('Mutation Request', function () {
 	    it('throws an error if name param is not a string', function () {
 	      (0, _chai.expect)(function () {
-	        actions.mutationRequest(42, 'thing', { lolcats: 'cats' });
+	        _index.actions.mutationRequest(42, 'thing', { lolcats: 'cats' });
 	      }).to.throw('`name` is required and must be a string');
 	      (0, _chai.expect)(function () {
-	        actions.mutationRequest();
+	        _index.actions.mutationRequest();
 	      }).to.throw('`name` is required and must be a string');
 	    });
 	    it('throws an error if fragment param is not a string', function () {
 	      (0, _chai.expect)(function () {
-	        actions.mutationRequest('thing', 42, { lolcats: 'cats' });
+	        _index.actions.mutationRequest('thing', 42, { lolcats: 'cats' });
 	      }).to.throw('`fragment` is required and must be a string');
 	      (0, _chai.expect)(function () {
-	        actions.mutationRequest('thing');
+	        _index.actions.mutationRequest('thing');
 	      }).to.throw('`fragment` is required and must be a string');
 	    });
 	    it('throws an error if vars param is not an object', function () {
 	      (0, _chai.expect)(function () {
-	        actions.mutationRequest('thing', 'thing', 'cats');
+	        _index.actions.mutationRequest('thing', 'thing', 'cats');
 	      }).to.throw('`vars` is required and must be an object');
 	      (0, _chai.expect)(function () {
-	        actions.mutationRequest('thing', 'thing');
+	        _index.actions.mutationRequest('thing', 'thing');
 	      }).to.throw('`vars` is required and must be an object');
 	    });
 	    it('returns an object', function () {
-	      (0, _chai.expect)(actions.mutationRequest('lol', 'thing', { lolcats: 'cats' })).to.be.an('object');
+	      (0, _chai.expect)(_index.actions.mutationRequest('lol', 'thing', { lolcats: 'cats' })).to.be.an('object');
 	    });
 	    it('has type: ROULADE_MUTATION_REQUEST', function () {
-	      (0, _chai.expect)(actions.mutationRequest('lol', 'thing', { lolcats: 'cats' })).to.have.property('type', 'ROULADE_MUTATION_REQUEST');
+	      (0, _chai.expect)(_index.actions.mutationRequest('lol', 'thing', { lolcats: 'cats' })).to.have.property('type', 'ROULADE_MUTATION_REQUEST');
 	    });
 	  });
 	  context('Mutation Error', function () {
 	    it('throws an error if name param is not a string', function () {
 	      (0, _chai.expect)(function () {
-	        actions.mutationError(new Error('graphQL error'), 42, 'thing', { lolcats: 'cats' });
+	        _index.actions.mutationError(new Error('graphQL error'), 42, 'thing', { lolcats: 'cats' });
 	      }).to.throw('`name` is required and must be a string');
 	      (0, _chai.expect)(function () {
-	        actions.mutationError(new Error('graphQL error'));
+	        _index.actions.mutationError(new Error('graphQL error'));
 	      }).to.throw('`name` is required and must be a string');
 	    });
 	    it('throws an error if fragment param is not a string', function () {
 	      (0, _chai.expect)(function () {
-	        actions.mutationError(new Error('graphQL error'), 'thing', 42, { lolcats: 'cats' });
+	        _index.actions.mutationError(new Error('graphQL error'), 'thing', 42, { lolcats: 'cats' });
 	      }).to.throw('`fragment` is required and must be a string');
 	      (0, _chai.expect)(function () {
-	        actions.mutationError(new Error('graphQL error'), 'thing');
+	        _index.actions.mutationError(new Error('graphQL error'), 'thing');
 	      }).to.throw('`fragment` is required and must be a string');
 	    });
 	    it('throws an error if vars param is not an object', function () {
 	      (0, _chai.expect)(function () {
-	        actions.mutationError(new Error('graphQL error'), 'thing', 'thing', 'cats');
+	        _index.actions.mutationError(new Error('graphQL error'), 'thing', 'thing', 'cats');
 	      }).to.throw('`vars` is required and must be an object');
 	      (0, _chai.expect)(function () {
-	        actions.mutationError(new Error('graphQL error'), 'thing', 'thing');
+	        _index.actions.mutationError(new Error('graphQL error'), 'thing', 'thing');
 	      }).to.throw('`vars` is required and must be an object');
 	    });
 	    it('returns an object', function () {
-	      (0, _chai.expect)(actions.mutationError(new Error('graphQL error'), 'stuff', 'thing', { lolcats: 'cats' })).to.be.an('object');
+	      (0, _chai.expect)(_index.actions.mutationError(new Error('graphQL error'), 'stuff', 'thing', { lolcats: 'cats' })).to.be.an('object');
 	    });
 	    it('has type: ROULADE_MUTATION_ERROR', function () {
-	      (0, _chai.expect)(actions.mutationError(new Error('graphQL error'), 'stuff', 'thing', { lolcats: 'cats' })).to.have.property('type', 'ROULADE_MUTATION_ERROR');
+	      (0, _chai.expect)(_index.actions.mutationError(new Error('graphQL error'), 'stuff', 'thing', { lolcats: 'cats' })).to.have.property('type', 'ROULADE_MUTATION_ERROR');
 	    });
 	  });
 	  context('Mutation Success', function () {
 	    it('throws an error if name param is not a string', function () {
 	      (0, _chai.expect)(function () {
-	        actions.mutationSuccess('response', 42, 'thing', { lolcats: 'cats' });
+	        _index.actions.mutationSuccess('response', 42, 'thing', { lolcats: 'cats' });
 	      }).to.throw('`name` is required and must be a string');
 	      (0, _chai.expect)(function () {
-	        actions.mutationSuccess('response');
+	        _index.actions.mutationSuccess('response');
 	      }).to.throw('`name` is required and must be a string');
 	    });
 	    it('throws an error if fragment param is not a string', function () {
 	      (0, _chai.expect)(function () {
-	        actions.mutationSuccess('response', 'thing', 42, { lolcats: 'cats' });
+	        _index.actions.mutationSuccess('response', 'thing', 42, { lolcats: 'cats' });
 	      }).to.throw('`fragment` is required and must be a string');
 	      (0, _chai.expect)(function () {
-	        actions.mutationSuccess('response', 'thing');
+	        _index.actions.mutationSuccess('response', 'thing');
 	      }).to.throw('`fragment` is required and must be a string');
 	    });
 	    it('throws an error if vars param is not an object', function () {
 	      (0, _chai.expect)(function () {
-	        actions.mutationSuccess('response', 'thing', 'thing', 'cats');
+	        _index.actions.mutationSuccess('response', 'thing', 'thing', 'cats');
 	      }).to.throw('`vars` is required and must be an object');
 	      (0, _chai.expect)(function () {
-	        actions.mutationSuccess('response', 'thing', 'thing');
+	        _index.actions.mutationSuccess('response', 'thing', 'thing');
 	      }).to.throw('`vars` is required and must be an object');
 	    });
 	    it('returns an object', function () {
-	      (0, _chai.expect)(actions.mutationSuccess('response', 'thing', 'stuff', { lolcats: 'cats' })).to.be.an('object');
+	      (0, _chai.expect)(_index.actions.mutationSuccess('response', 'thing', 'stuff', { lolcats: 'cats' })).to.be.an('object');
 	    });
 	    it('has type: ROULADE_MUTATION_SUCCESS', function () {
-	      (0, _chai.expect)(actions.mutationSuccess('response', 'thing', 'stuff', { lolcats: 'cats' })).to.have.property('type', 'ROULADE_MUTATION_SUCCESS');
+	      (0, _chai.expect)(_index.actions.mutationSuccess('response', 'thing', 'stuff', { lolcats: 'cats' })).to.have.property('type', 'ROULADE_MUTATION_SUCCESS');
 	    });
 	  });
 	});
@@ -247,14 +250,23 @@ module.exports =
 	});
 
 /***/ },
-/* 1 */
+
+/***/ 153:
+/***/ function(module, exports) {
+
+	module.exports = require("buffer");
+
+/***/ },
+
+/***/ 179:
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(2);
+	module.exports = __webpack_require__(180);
 
 
 /***/ },
-/* 2 */
+
+/***/ 180:
 /***/ function(module, exports, __webpack_require__) {
 
 	/*!
@@ -276,13 +288,13 @@ module.exports =
 	 * Assertion Error
 	 */
 	
-	exports.AssertionError = __webpack_require__(3);
+	exports.AssertionError = __webpack_require__(181);
 	
 	/*!
 	 * Utils for plugins (not exported)
 	 */
 	
-	var util = __webpack_require__(4);
+	var util = __webpack_require__(182);
 	
 	/**
 	 * # .use(function)
@@ -313,47 +325,48 @@ module.exports =
 	 * Configuration
 	 */
 	
-	var config = __webpack_require__(17);
+	var config = __webpack_require__(195);
 	exports.config = config;
 	
 	/*!
 	 * Primary `Assertion` prototype
 	 */
 	
-	var assertion = __webpack_require__(33);
+	var assertion = __webpack_require__(210);
 	exports.use(assertion);
 	
 	/*!
 	 * Core Assertions
 	 */
 	
-	var core = __webpack_require__(34);
+	var core = __webpack_require__(211);
 	exports.use(core);
 	
 	/*!
 	 * Expect interface
 	 */
 	
-	var expect = __webpack_require__(35);
+	var expect = __webpack_require__(212);
 	exports.use(expect);
 	
 	/*!
 	 * Should interface
 	 */
 	
-	var should = __webpack_require__(36);
+	var should = __webpack_require__(213);
 	exports.use(should);
 	
 	/*!
 	 * Assert interface
 	 */
 	
-	var assert = __webpack_require__(37);
+	var assert = __webpack_require__(214);
 	exports.use(assert);
 
 
 /***/ },
-/* 3 */
+
+/***/ 181:
 /***/ function(module, exports) {
 
 	/*!
@@ -475,7 +488,8 @@ module.exports =
 
 
 /***/ },
-/* 4 */
+
+/***/ 182:
 /***/ function(module, exports, __webpack_require__) {
 
 	/*!
@@ -494,124 +508,125 @@ module.exports =
 	 * test utility
 	 */
 	
-	exports.test = __webpack_require__(5);
+	exports.test = __webpack_require__(183);
 	
 	/*!
 	 * type utility
 	 */
 	
-	exports.type = __webpack_require__(7);
+	exports.type = __webpack_require__(185);
 	
 	/*!
 	 * expectTypes utility
 	 */
-	exports.expectTypes = __webpack_require__(9);
+	exports.expectTypes = __webpack_require__(187);
 	
 	/*!
 	 * message utility
 	 */
 	
-	exports.getMessage = __webpack_require__(10);
+	exports.getMessage = __webpack_require__(188);
 	
 	/*!
 	 * actual utility
 	 */
 	
-	exports.getActual = __webpack_require__(11);
+	exports.getActual = __webpack_require__(189);
 	
 	/*!
 	 * Inspect util
 	 */
 	
-	exports.inspect = __webpack_require__(12);
+	exports.inspect = __webpack_require__(190);
 	
 	/*!
 	 * Object Display util
 	 */
 	
-	exports.objDisplay = __webpack_require__(16);
+	exports.objDisplay = __webpack_require__(194);
 	
 	/*!
 	 * Flag utility
 	 */
 	
-	exports.flag = __webpack_require__(6);
+	exports.flag = __webpack_require__(184);
 	
 	/*!
 	 * Flag transferring utility
 	 */
 	
-	exports.transferFlags = __webpack_require__(18);
+	exports.transferFlags = __webpack_require__(196);
 	
 	/*!
 	 * Deep equal utility
 	 */
 	
-	exports.eql = __webpack_require__(19);
+	exports.eql = __webpack_require__(197);
 	
 	/*!
 	 * Deep path value
 	 */
 	
-	exports.getPathValue = __webpack_require__(24);
+	exports.getPathValue = __webpack_require__(201);
 	
 	/*!
 	 * Deep path info
 	 */
 	
-	exports.getPathInfo = __webpack_require__(25);
+	exports.getPathInfo = __webpack_require__(202);
 	
 	/*!
 	 * Check if a property exists
 	 */
 	
-	exports.hasProperty = __webpack_require__(26);
+	exports.hasProperty = __webpack_require__(203);
 	
 	/*!
 	 * Function name
 	 */
 	
-	exports.getName = __webpack_require__(13);
+	exports.getName = __webpack_require__(191);
 	
 	/*!
 	 * add Property
 	 */
 	
-	exports.addProperty = __webpack_require__(27);
+	exports.addProperty = __webpack_require__(204);
 	
 	/*!
 	 * add Method
 	 */
 	
-	exports.addMethod = __webpack_require__(28);
+	exports.addMethod = __webpack_require__(205);
 	
 	/*!
 	 * overwrite Property
 	 */
 	
-	exports.overwriteProperty = __webpack_require__(29);
+	exports.overwriteProperty = __webpack_require__(206);
 	
 	/*!
 	 * overwrite Method
 	 */
 	
-	exports.overwriteMethod = __webpack_require__(30);
+	exports.overwriteMethod = __webpack_require__(207);
 	
 	/*!
 	 * Add a chainable method
 	 */
 	
-	exports.addChainableMethod = __webpack_require__(31);
+	exports.addChainableMethod = __webpack_require__(208);
 	
 	/*!
 	 * Overwrite chainable method
 	 */
 	
-	exports.overwriteChainableMethod = __webpack_require__(32);
+	exports.overwriteChainableMethod = __webpack_require__(209);
 
 
 /***/ },
-/* 5 */
+
+/***/ 183:
 /***/ function(module, exports, __webpack_require__) {
 
 	/*!
@@ -624,7 +639,7 @@ module.exports =
 	 * Module dependancies
 	 */
 	
-	var flag = __webpack_require__(6);
+	var flag = __webpack_require__(184);
 	
 	/**
 	 * # test(object, expression)
@@ -645,7 +660,8 @@ module.exports =
 
 
 /***/ },
-/* 6 */
+
+/***/ 184:
 /***/ function(module, exports) {
 
 	/*!
@@ -684,14 +700,16 @@ module.exports =
 
 
 /***/ },
-/* 7 */
+
+/***/ 185:
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(8);
+	module.exports = __webpack_require__(186);
 
 
 /***/ },
-/* 8 */
+
+/***/ 186:
 /***/ function(module, exports) {
 
 	/*!
@@ -831,7 +849,8 @@ module.exports =
 
 
 /***/ },
-/* 9 */
+
+/***/ 187:
 /***/ function(module, exports, __webpack_require__) {
 
 	/*!
@@ -854,9 +873,9 @@ module.exports =
 	 * @api public
 	 */
 	
-	var AssertionError = __webpack_require__(3);
-	var flag = __webpack_require__(6);
-	var type = __webpack_require__(7);
+	var AssertionError = __webpack_require__(181);
+	var flag = __webpack_require__(184);
+	var type = __webpack_require__(185);
 	
 	module.exports = function (obj, types) {
 	  var obj = flag(obj, 'object');
@@ -879,7 +898,8 @@ module.exports =
 
 
 /***/ },
-/* 10 */
+
+/***/ 188:
 /***/ function(module, exports, __webpack_require__) {
 
 	/*!
@@ -892,10 +912,10 @@ module.exports =
 	 * Module dependancies
 	 */
 	
-	var flag = __webpack_require__(6)
-	  , getActual = __webpack_require__(11)
-	  , inspect = __webpack_require__(12)
-	  , objDisplay = __webpack_require__(16);
+	var flag = __webpack_require__(184)
+	  , getActual = __webpack_require__(189)
+	  , inspect = __webpack_require__(190)
+	  , objDisplay = __webpack_require__(194);
 	
 	/**
 	 * ### .getMessage(object, message, negateMessage)
@@ -936,7 +956,8 @@ module.exports =
 
 
 /***/ },
-/* 11 */
+
+/***/ 189:
 /***/ function(module, exports) {
 
 	/*!
@@ -962,15 +983,16 @@ module.exports =
 
 
 /***/ },
-/* 12 */
+
+/***/ 190:
 /***/ function(module, exports, __webpack_require__) {
 
 	// This is (almost) directly from Node.js utils
 	// https://github.com/joyent/node/blob/f8c335d0caf47f16d31413f89aa28eda3878e3aa/lib/util.js
 	
-	var getName = __webpack_require__(13);
-	var getProperties = __webpack_require__(14);
-	var getEnumerableProperties = __webpack_require__(15);
+	var getName = __webpack_require__(191);
+	var getProperties = __webpack_require__(192);
+	var getEnumerableProperties = __webpack_require__(193);
 	
 	module.exports = inspect;
 	
@@ -1303,7 +1325,8 @@ module.exports =
 
 
 /***/ },
-/* 13 */
+
+/***/ 191:
 /***/ function(module, exports) {
 
 	/*!
@@ -1331,7 +1354,8 @@ module.exports =
 
 
 /***/ },
-/* 14 */
+
+/***/ 192:
 /***/ function(module, exports) {
 
 	/*!
@@ -1373,7 +1397,8 @@ module.exports =
 
 
 /***/ },
-/* 15 */
+
+/***/ 193:
 /***/ function(module, exports) {
 
 	/*!
@@ -1405,7 +1430,8 @@ module.exports =
 
 
 /***/ },
-/* 16 */
+
+/***/ 194:
 /***/ function(module, exports, __webpack_require__) {
 
 	/*!
@@ -1418,8 +1444,8 @@ module.exports =
 	 * Module dependancies
 	 */
 	
-	var inspect = __webpack_require__(12);
-	var config = __webpack_require__(17);
+	var inspect = __webpack_require__(190);
+	var config = __webpack_require__(195);
 	
 	/**
 	 * ### .objDisplay (object)
@@ -1461,7 +1487,8 @@ module.exports =
 
 
 /***/ },
-/* 17 */
+
+/***/ 195:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -1522,7 +1549,8 @@ module.exports =
 
 
 /***/ },
-/* 18 */
+
+/***/ 196:
 /***/ function(module, exports) {
 
 	/*!
@@ -1573,14 +1601,16 @@ module.exports =
 
 
 /***/ },
-/* 19 */
+
+/***/ 197:
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(20);
+	module.exports = __webpack_require__(198);
 
 
 /***/ },
-/* 20 */
+
+/***/ 198:
 /***/ function(module, exports, __webpack_require__) {
 
 	/*!
@@ -1593,14 +1623,14 @@ module.exports =
 	 * Module dependencies
 	 */
 	
-	var type = __webpack_require__(21);
+	var type = __webpack_require__(199);
 	
 	/*!
 	 * Buffer.isBuffer browser shim
 	 */
 	
 	var Buffer;
-	try { Buffer = __webpack_require__(23).Buffer; }
+	try { Buffer = __webpack_require__(153).Buffer; }
 	catch(ex) {
 	  Buffer = {};
 	  Buffer.isBuffer = function() { return false; }
@@ -1843,14 +1873,16 @@ module.exports =
 
 
 /***/ },
-/* 21 */
+
+/***/ 199:
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(22);
+	module.exports = __webpack_require__(200);
 
 
 /***/ },
-/* 22 */
+
+/***/ 200:
 /***/ function(module, exports) {
 
 	/*!
@@ -1998,13 +2030,8 @@ module.exports =
 
 
 /***/ },
-/* 23 */
-/***/ function(module, exports) {
 
-	module.exports = require("buffer");
-
-/***/ },
-/* 24 */
+/***/ 201:
 /***/ function(module, exports, __webpack_require__) {
 
 	/*!
@@ -2014,7 +2041,7 @@ module.exports =
 	 * MIT Licensed
 	 */
 	
-	var getPathInfo = __webpack_require__(25);
+	var getPathInfo = __webpack_require__(202);
 	
 	/**
 	 * ### .getPathValue(path, object)
@@ -2053,7 +2080,8 @@ module.exports =
 
 
 /***/ },
-/* 25 */
+
+/***/ 202:
 /***/ function(module, exports, __webpack_require__) {
 
 	/*!
@@ -2062,7 +2090,7 @@ module.exports =
 	 * MIT Licensed
 	 */
 	
-	var hasProperty = __webpack_require__(26);
+	var hasProperty = __webpack_require__(203);
 	
 	/**
 	 * ### .getPathInfo(path, object)
@@ -2170,7 +2198,8 @@ module.exports =
 
 
 /***/ },
-/* 26 */
+
+/***/ 203:
 /***/ function(module, exports, __webpack_require__) {
 
 	/*!
@@ -2179,7 +2208,7 @@ module.exports =
 	 * MIT Licensed
 	 */
 	
-	var type = __webpack_require__(7);
+	var type = __webpack_require__(185);
 	
 	/**
 	 * ### .hasProperty(object, name)
@@ -2240,7 +2269,8 @@ module.exports =
 
 
 /***/ },
-/* 27 */
+
+/***/ 204:
 /***/ function(module, exports, __webpack_require__) {
 
 	/*!
@@ -2249,8 +2279,8 @@ module.exports =
 	 * MIT Licensed
 	 */
 	
-	var config = __webpack_require__(17);
-	var flag = __webpack_require__(6);
+	var config = __webpack_require__(195);
+	var flag = __webpack_require__(184);
 	
 	/**
 	 * ### addProperty (ctx, name, getter)
@@ -2294,7 +2324,8 @@ module.exports =
 
 
 /***/ },
-/* 28 */
+
+/***/ 205:
 /***/ function(module, exports, __webpack_require__) {
 
 	/*!
@@ -2303,7 +2334,7 @@ module.exports =
 	 * MIT Licensed
 	 */
 	
-	var config = __webpack_require__(17);
+	var config = __webpack_require__(195);
 	
 	/**
 	 * ### .addMethod (ctx, name, method)
@@ -2330,7 +2361,7 @@ module.exports =
 	 * @name addMethod
 	 * @api public
 	 */
-	var flag = __webpack_require__(6);
+	var flag = __webpack_require__(184);
 	
 	module.exports = function (ctx, name, method) {
 	  ctx[name] = function () {
@@ -2344,7 +2375,8 @@ module.exports =
 
 
 /***/ },
-/* 29 */
+
+/***/ 206:
 /***/ function(module, exports) {
 
 	/*!
@@ -2405,7 +2437,8 @@ module.exports =
 
 
 /***/ },
-/* 30 */
+
+/***/ 207:
 /***/ function(module, exports) {
 
 	/*!
@@ -2463,7 +2496,8 @@ module.exports =
 
 
 /***/ },
-/* 31 */
+
+/***/ 208:
 /***/ function(module, exports, __webpack_require__) {
 
 	/*!
@@ -2476,9 +2510,9 @@ module.exports =
 	 * Module dependencies
 	 */
 	
-	var transferFlags = __webpack_require__(18);
-	var flag = __webpack_require__(6);
-	var config = __webpack_require__(17);
+	var transferFlags = __webpack_require__(196);
+	var flag = __webpack_require__(184);
+	var config = __webpack_require__(195);
 	
 	/*!
 	 * Module variables
@@ -2581,7 +2615,8 @@ module.exports =
 
 
 /***/ },
-/* 32 */
+
+/***/ 209:
 /***/ function(module, exports) {
 
 	/*!
@@ -2641,7 +2676,8 @@ module.exports =
 
 
 /***/ },
-/* 33 */
+
+/***/ 210:
 /***/ function(module, exports, __webpack_require__) {
 
 	/*!
@@ -2651,7 +2687,7 @@ module.exports =
 	 * MIT Licensed
 	 */
 	
-	var config = __webpack_require__(17);
+	var config = __webpack_require__(195);
 	
 	module.exports = function (_chai, util) {
 	  /*!
@@ -2778,7 +2814,8 @@ module.exports =
 
 
 /***/ },
-/* 34 */
+
+/***/ 211:
 /***/ function(module, exports) {
 
 	/*!
@@ -4644,7 +4681,8 @@ module.exports =
 
 
 /***/ },
-/* 35 */
+
+/***/ 212:
 /***/ function(module, exports) {
 
 	/*!
@@ -4684,7 +4722,8 @@ module.exports =
 
 
 /***/ },
-/* 36 */
+
+/***/ 213:
 /***/ function(module, exports) {
 
 	/*!
@@ -4891,7 +4930,8 @@ module.exports =
 
 
 /***/ },
-/* 37 */
+
+/***/ 214:
 /***/ function(module, exports) {
 
 	/*!
@@ -6542,5 +6582,6 @@ module.exports =
 
 
 /***/ }
-/******/ ]);
+
+/******/ });
 //# sourceMappingURL=test.js.map

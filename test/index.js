@@ -1,5 +1,7 @@
 import chai, { expect } from 'chai'
 
+import { actions } from './index.js';
+
 // Mocks
 const mockState = {
   parentState: {
