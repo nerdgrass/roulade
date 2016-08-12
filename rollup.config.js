@@ -1,9 +1,9 @@
 import babel from 'rollup-plugin-babel';
 
 export default {
-    entry: 'src/bin/app.js',
+    entry: 'src/index',
     dest: 'dist/app.js',
-    format: 'umd',
+    format: 'cjs',
 
     // Transpile any ES2015 in the output file.
     plugins: [babel()],
