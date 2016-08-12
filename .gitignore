@@ -1,4 +1,13 @@
-# OSX
+
+# Build
+/node_modules/
+npm-debug.log
+/es5
+/dist
+*.tgz
+
+# OS
+.DS_Store# OSX
 *.DS_Store
 
 # Node
